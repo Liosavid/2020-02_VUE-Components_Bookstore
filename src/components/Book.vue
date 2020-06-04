@@ -39,15 +39,21 @@
 
 
 <script>
+
+ import json from '../assets/bookstore_data';
+     
+
 export default {
   data() {
     return {
-      books: [],
+      books: json.books,
       search: ""
     };
   },
 
-  created() {
+created() {
+
+   /*
     fetch("https://api.myjson.com/bins/zyv02", {
       method: "GET"
     })
@@ -58,10 +64,18 @@ export default {
         console.log("fetch working");
         this.books = dataFromServer.books;
       });
+
+        */
+
+       
   },
 
+
+
   computed: {
+
     filteredBooks: function() {
+      console.log(json.books);
       return this.books.filter(book => {
         return book.title.toLowerCase().match(this.search.toLowerCase());
       });
