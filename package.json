@@ -12,6 +12,8 @@
     "vue": "^2.6.10",
     "vue-easy-lightbox": "^0.9.1",
     "vue-fancybox": "^1.0.3"
+      "acorn": ">=6.4.1"
+
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
